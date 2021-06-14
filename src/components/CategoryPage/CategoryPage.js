@@ -136,7 +136,7 @@ class ProductCard extends React.Component {
                 }
 
                 <div className="product-card-name">{this.props.product.name}</div>
-                <div className="product-card-price">{currencySymbols[this.getPriceInSelectedCurrency().currency]}{this.getPriceInSelectedCurrency().amount}</div>
+                <div className="product-card-price price">{currencySymbols[this.getPriceInSelectedCurrency().currency]}{this.getPriceInSelectedCurrency().amount}</div>
             </div>
         );
     }

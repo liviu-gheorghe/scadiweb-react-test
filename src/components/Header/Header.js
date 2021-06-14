@@ -129,7 +129,21 @@ class Header extends React.Component {
                             }
                         </ul>
                     </nav>
-                    <div className="header-go-back"><div>Back</div></div>
+                    <div className="header-go-back">
+                        <img
+                            style={{
+                                height: "25px",
+                                width: "25px",
+                                marginTop: "20px",
+                                cursor: "pointer"
+                            }}
+                            onClick = {() => {
+                                window.location.href = process.env.REACT_APP_URL
+                            }}
+                            src={require('../../assets/images/go_back_green.png').default}
+                            alt=""
+                        />
+                    </div>
                     <div className="header-menu">
                         <CurrencySwitcher />
                         <Minicart />

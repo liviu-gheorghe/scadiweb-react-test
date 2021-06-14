@@ -4,7 +4,7 @@ import './HomePage.css';
 class HomePage extends React.Component {
     render() {
         return (
-            <p>HomePage</p>
+            <div className="homepage-container">ScadiWeb React Test Homepage</div>
         );
     }
 }

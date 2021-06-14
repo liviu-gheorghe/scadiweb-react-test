@@ -15,7 +15,7 @@
 }
 
 .cart-item-details {
-    min-width: 900px;
+    min-width: 1000px;
     flex-basis: 70%;
 }
 .cart-item-quantity-chooser {
@@ -53,12 +53,12 @@
 }
 .cart-title {
     text-transform: uppercase;
-    font-size: 27px;
+    font-size: 35px;
     font-weight: 500;
 }
 
 .cart-item-container .item-title {
-    font-size: 25px;
+    font-size: 30px;
     margin: 10px 0;
 }
 

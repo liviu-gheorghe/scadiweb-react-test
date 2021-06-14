@@ -269,3 +269,4 @@ class ProductImageGallery extends React.Component {
 
 
 export default ProductPage;
+export {ProductAttributes};

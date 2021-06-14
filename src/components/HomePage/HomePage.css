@@ -1,0 +1,9 @@
+.homepage-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 115px);
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: gray;
+}

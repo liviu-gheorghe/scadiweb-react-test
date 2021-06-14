@@ -60,6 +60,7 @@ class Minicart extends React.Component {
                         <></>
                     )
                 }
+                <div className="mini-cart-overlay" style={{display: this.state.isModalOpen ? "block" : "none"}}/>
                 <div className="mini-cart-body" style={{display: this.state.isModalOpen ? "block" : "none"}}>
                     {this.context.cartItems?.length ? (
                         <>
@@ -92,7 +93,7 @@ class Minicart extends React.Component {
                             </div>
                         </>
                     ):(
-                        <p>No cart items</p>
+                        <p style={{padding: "20px"}}>No cart items</p>
                     )}
                 </div>
             </div>
@@ -118,7 +119,7 @@ class MinicartItem extends React.Component {
             <div className="mini-cart-item-container">
                 <div className="mini-cart-item-details">
                     <div className="item-title">{this.props.product.name}</div>
-                    <div className="item-price">{currencySymbols[this.getPriceInSelectedCurrency().currency]}{this.getPriceInSelectedCurrency().amount}</div>
+                    <div className="item-price price">{currencySymbols[this.getPriceInSelectedCurrency().currency]}{this.getPriceInSelectedCurrency().amount}</div>
                     <div className="item-attributes">
                         {
                             this.props.product.attributes.map((attribute,key) => {
@@ -156,7 +157,6 @@ class MinicartItem extends React.Component {
                             })
                         }
                     </div>
-
                 </div>
                 <div className="mini-cart-item-quantity-chooser">
                     <div  onClick={ () => {this.updateProductQty(this.props.product, 1)} } className="qty-increase">+</div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './CartPage.css';
+import {ProductAttributes} from "../ProductPage/ProductPage";
 import {AppContext} from "../../globalState";
 import {currencySymbols} from "../../util/currencySymbols";
 
@@ -27,7 +28,7 @@ class CartPage extends React.Component {
                                     </div>
                                 </>
                             ):(
-                                <>No cart items</>
+                                <p style={{padding: "20px"}}>No cart items</p>
                             )
                         }
                     </div>
@@ -55,7 +56,8 @@ class CartItem extends React.Component {
             <div className="cart-item-container">
                 <div className="cart-item-details">
                     <div className="item-title">{this.props.product.name}</div>
-                    <div className="item-price">{currencySymbols[this.getPriceInSelectedCurrency().currency]}{this.getPriceInSelectedCurrency().amount}</div>
+                    <div className="item-price price">{currencySymbols[this.getPriceInSelectedCurrency().currency]}{this.getPriceInSelectedCurrency().amount}</div>
+                    <ProductAttributes product={this.props.product} />
                 </div>
                 <div className="cart-item-quantity-chooser">
                     <div  onClick={ () => {this.updateProductQty(this.props.product, 1)} } className="qty-increase">+</div>
