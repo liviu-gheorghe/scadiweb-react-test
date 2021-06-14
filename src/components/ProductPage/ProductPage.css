@@ -1,0 +1,182 @@
+
+.gallery-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.image-thumbnails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 16.66%;
+}
+
+.current-image-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 40px;
+}
+
+
+.thumbnail {
+    height: 120px;
+    width: 120px;
+    padding: 10px;
+    transition: all .2s ease-in-out;
+}
+
+.thumbnail:nth-child(1) {
+    padding-top: 0;
+}
+
+/*.thumbnail:hover {*/
+/*    transform: scale(1.05);*/
+/*}*/
+
+.thumbnail img {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+}
+
+.image-thumbnails {
+    cursor: pointer;
+}
+
+.current-image-container img {
+
+    transition: all .3s ease;
+    width: 900px;
+    height: 775px;
+    object-fit: cover;
+}
+
+
+/* Simulate Bootstrap Functionality */
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* For desktop: */
+.col-1 {flex-basis: 8.33%;}
+.col-2 {flex-basis: 16.66%;}
+.col-3 {flex-basis: 25%;}
+.col-4 {flex-basis: 33.33%;}
+.col-5 {flex-basis: 41.66%;}
+.col-6 {flex-basis: 50%;}
+.col-7 {flex-basis: 58.33%;}
+.col-8 {flex-basis: 66.66%;}
+.col-9 {flex-basis: 75%;}
+.col-10 {flex-basis: 83.33%;}
+.col-11 {flex-basis: 91.66%;}
+.col-12 {flex-basis: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+
+#add-to-cart {
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    background-color: #5ece7b;
+    height: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.product-sidebar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-sidebar {
+    width: 350px;
+}
+
+.product-name {
+    font-size: 30px;
+    font-family: monospace;
+}
+
+
+.product-price-label {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.product-price-value {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Kaushan Script', cursive;
+}
+
+
+.product-description {
+    padding: 30px 0;
+}
+
+.attribute-item {
+    text-transform: uppercase;
+    padding:10px;
+    color: #1d1f22;
+    border: 1.5px solid #1d1f22;
+    display: inline-flex;
+    margin-right: 10px;
+    margin-top: 4px;
+    height: 25px;
+    width: 45px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.attribute-item-selected {
+    background-color: #1d1f22;
+    color: #fff;
+}
+
+.product-attribute-label {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+.product-card-add-to-cart {
+    position: absolute;
+    top:0;
+}
+
+.color-swatch {
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.swatch-attribute-item-selected {
+    border: 2px solid #1d1f22;
+}
+
